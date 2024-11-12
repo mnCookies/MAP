@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Google Maps</title>
+   <style>
+       /* Set the size of the map */
+       #map {
+           height: 100%;
+           width: 100%;
+       }
+       /* Ensure full-screen size for the WebView */
+       html, body {
+           height: 100%;
+           margin: 0;
+           padding: 0;
+       }
+   </style>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9YxDej2yrUR0HSOnYXXakNHTyRlw29aY"></script>
+   <script>
+       function initMap() {
+           var map = new google.maps.Map(document.getElementById("map"), {
+               center: { lat: 7.071, lng: 125.611 },
+               zoom: 8,
+           });
+       }
+   </script>
+</head>
+<body onload="initMap()">
+   <div id="map"></div>
+</body>
+</html>
